@@ -6,7 +6,7 @@ const fetch = require('node-fetch');
 global.fetch = fetch;
 
 const getAssetsPrefix = (port: string) => {
-  return process.env.HEROKU_APP_NAME ? `${process.env.HEROKU_APP_NAME}.herokuapp.com` : `localhost:${port}`;
+  return process.env.HEROKU_APP_NAME ? `${process.env.HEROKU_APP_NAME}` : `http://localhost:${port}`;
 }
 
 
@@ -15,7 +15,7 @@ const init = async () => {
   const assetsPrefix = getAssetsPrefix(port);
 
   const config: any = {
-    assetsPrefix: `http://${assetsPrefix}/component-assets/`,
+    assetsPrefix: `${assetsPrefix}/component-assets/`,
     server: {
       assetsEndpoint: '/component-assets/'
     },

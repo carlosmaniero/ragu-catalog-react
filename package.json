@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "yarn build && yarn serve",
     "build": "tsc",
-    "start": "HEROKU_APP_NAME=ragu-catalog-react yarn serve",
+    "start": "HEROKU_APP_NAME=https://ragu-catalog-react.herokuapp.com yarn serve",
     "serve": "node dist/index.js"
   },
   "author": "",
