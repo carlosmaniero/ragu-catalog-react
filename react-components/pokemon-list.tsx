@@ -11,13 +11,31 @@ interface PokemonListProps {
   pokemons: PokemonData[]
 }
 
-const PokemonItem = styled.div`
-  float: left;
-  min-width: 280px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+const PokemonListWrapper = styled.div`
+  display: grid;
+  grid-gap: 20px;
+
+  @media screen and (min-width: 400px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: 800px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1500px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1900px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 `;
 
-export const PokemonList = ({pokemons}: PokemonListProps) => <>
-  {pokemons.map((pokemon) => <PokemonItem key={pokemon.name}><Pokemon pokemon={pokemon} /></PokemonItem>)}
-</>
+export const PokemonList = ({pokemons}: PokemonListProps) => <PokemonListWrapper>
+  {pokemons.map((pokemon) => <Pokemon pokemon={pokemon} key={pokemon.name} />)}
+</PokemonListWrapper>
