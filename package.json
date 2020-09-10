@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "yarn build && yarn start",
+    "dev": "yarn build && yarn serve",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "HEROKU_APP_NAME=ragu-catalog-react yarn serve",
+    "serve": "node dist/index.js"
   },
   "author": "",
   "license": "ISC",
