@@ -15,7 +15,7 @@ const PokemonListWrapper = styled.div`
   display: grid;
   grid-gap: 20px;
 
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: 550px) {
     grid-template-columns: 1fr 1fr;
   }
 
