@@ -1,12 +1,10 @@
 import ReactDOM from "react-dom";
 import {ReactElement} from "react";
+import {ServerStyleSheet} from "styled-components";
+import {renderToString} from "react-dom/server";
 
 export type PropsToState<Props, State> = (props: Props) => Promise<State>;
 export type ComponentRender<Props, State> = (props: Props, state: State) => ReactElement;
-
-function _non_webpack_require(id: string) {
-  return require(id);
-}
 
 export interface CreateRaguComponent<Props, State> {
   propsToState: PropsToState<Props, State>,
@@ -32,9 +30,6 @@ export const createReactRaguComponent = <Props, State>({propsToState, renderComp
     }
   ],
   async render(props: Props) {
-    const {renderToString} = _non_webpack_require("react-dom/server");
-    const {ServerStyleSheet} = _non_webpack_require("styled-components");
-
     const state = await propsToState(props);
 
     const sheet = new ServerStyleSheet()
