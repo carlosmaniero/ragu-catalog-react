@@ -21,12 +21,8 @@ export const createReactRaguComponent = <Props, State>({propsToState, renderComp
     {
       nodeRequire: 'react-dom',
       globalVariable: 'ReactDOM',
-      dependency: 'https://unpkg.com/react-dom@16/umd/react-dom.production.min.js'
-    },
-    {
-      nodeRequire: 'react-dom/server',
-      globalVariable: 'ReactDOM',
-      dependency: 'https://unpkg.com/react-dom@16/umd/react-dom.production.min.js'
+      dependency: 'https://unpkg.com/react-dom@16/umd/react-dom.production.min.js',
+      order: 1
     }
   ],
   async render(props: Props) {
