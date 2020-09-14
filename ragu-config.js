@@ -18,7 +18,6 @@ module.exports = {
   },
   compiler: {
     assetsPrefix: `${assetsPrefix}/component-assets/`,
-    watchMode: process.env.WATCH_MODE === 'true',
     webpack: {
       view: createNodeWebpackConfig(),
       hydrate: createBrowserConfig()
