@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "yarn build && yarn serve",
+    "dev": "yarn build && (yarn build --watch & WATCH_MODE=true yarn serve)",
     "build": "tsc",
     "start": "HEROKU_APP_NAME=https://ragu-catalog-react.herokuapp.com yarn serve",
     "serve": "node dist/index.js"
@@ -18,7 +18,7 @@
     "@types/webpack": "^4.41.22",
     "chunks-2-json-webpack-plugin": "^1.0.4",
     "node-fetch": "^2.6.1",
-    "ragu-server": "^0.0.3",
+    "ragu-server": "^0.0.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.2.0",

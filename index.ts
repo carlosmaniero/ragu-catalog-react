@@ -1,6 +1,6 @@
 import path = require("path");
-import {createWebpackConfig} from "./webpack.config";
 import {ComponentsCompiler, RaguServer, RaguServerConfig} from "ragu-server";
+
 const fetch = require('node-fetch');
 
 global.fetch = fetch;
@@ -15,18 +15,25 @@ const init = async () => {
   const assetsPrefix = getAssetsPrefix(port);
 
   const config: RaguServerConfig = {
-    assetsPrefix: `${assetsPrefix}/component-assets/`,
     server: {
-      assetsEndpoint: '/component-assets/'
+      port,
+      routes: {
+        assets: '/component-assets/'
+      },
+      previewEnabled: true
+    },
+    compiler: {
+      assetsPrefix: `${assetsPrefix}/component-assets/`,
+      watchMode: process.env.WATCH_MODE === 'true',
+      output: {
+        node: path.join(__dirname, 'pre_compiled_components'),
+        browser: path.join(__dirname, 'compiled_components')
+      }
     },
     components: {
-      preCompiledOutput: path.join(__dirname, 'pre_compiled_components'),
       namePrefix: 'catalog',
-      output: path.join(__dirname, 'compiled_components'),
-      sourceRoot: path.join(__dirname, 'components')
+      sourceRoot: path.join(__dirname, 'components'),
     },
-    port,
-    webpackConfig: createWebpackConfig() as any
   };
 
   const compiler = new ComponentsCompiler(config);
