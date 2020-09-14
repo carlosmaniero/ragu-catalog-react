@@ -18,9 +18,20 @@ export const reactComponentView = <Props, State>({propsToState, renderComponent}
       dependency: 'https://unpkg.com/react@16/umd/react.production.min.js'
     },
     {
+      nodeRequire: 'react-is',
+      globalVariable: 'reactIs',
+      dependency: 'https://unpkg.com/react-is@16.13.1/umd/react-is.production.min.js'
+    },
+    {
       nodeRequire: 'react-dom',
       globalVariable: 'ReactDOM',
       dependency: 'https://unpkg.com/react-dom@16/umd/react-dom.production.min.js',
+      order: 1
+    },
+    {
+      nodeRequire: 'styled-components',
+      globalVariable: 'styled',
+      dependency: 'https://unpkg.com/styled-components/dist/styled-components.min.js',
       order: 1
     }
   ],
