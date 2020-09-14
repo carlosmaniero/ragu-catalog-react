@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "ragu-server dev",
-    "build": "ragu-server build",
+    "build": "HEROKU_APP_NAME=https://ragu-catalog-react.herokuapp.com ragu-server build",
     "start": "HEROKU_APP_NAME=https://ragu-catalog-react.herokuapp.com yarn serve",
     "serve": "ragu-server run"
   },
