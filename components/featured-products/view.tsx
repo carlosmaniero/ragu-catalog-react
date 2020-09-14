@@ -1,5 +1,5 @@
 import * as React from "react";
-import {createReactRaguComponent} from "../../ragu-react-helper";
+import {reactComponentView} from "../../ragu-react-view";
 import {PokemonList} from "../../react-components/pokemon-list";
 
 export interface PokemonData {
@@ -12,7 +12,7 @@ interface PokeAPIResult {
   url: string
 }
 
-export default createReactRaguComponent<{}, PokemonData[]>({
+export default reactComponentView<{}, PokemonData[]>({
     propsToState: async () => {
       const response = await fetch('https://pokeapi.co/api/v2/pokemon');
       const responseBody = await response.json();

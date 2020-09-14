@@ -1,4 +1,3 @@
-import ReactDOM from "react-dom";
 import {ReactElement} from "react";
 import {ServerStyleSheet} from "styled-components";
 import {renderToString} from "react-dom/server";
@@ -11,7 +10,7 @@ export interface CreateRaguComponent<Props, State> {
   renderComponent: ComponentRender<Props, State>
 }
 
-export const createReactRaguComponent = <Props, State>({propsToState, renderComponent}: CreateRaguComponent<Props, State>) => ({
+export const reactComponentView = <Props, State>({propsToState, renderComponent}: CreateRaguComponent<Props, State>) => ({
   dependencies: [
     {
       nodeRequire: 'react',
@@ -36,8 +35,5 @@ export const createReactRaguComponent = <Props, State>({propsToState, renderComp
       state,
       html: `${style}<div class="react-root">${html}</div>`
     }
-  },
-  hydrate(element: HTMLElement, props: Props, state: State) {
-    ReactDOM.hydrate(renderComponent(props, state), element.querySelector('.react-root'));
   }
 })

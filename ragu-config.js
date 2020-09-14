@@ -1,4 +1,4 @@
-const {createWebpackConfig} = require("./webpack.config");
+const {createNodeWebpackConfig, createBrowserConfig} = require("./webpack.config");
 
 const path = require("path");
 const fetch = require('node-fetch');
@@ -20,11 +20,12 @@ module.exports = {
     assetsPrefix: `${assetsPrefix}/component-assets/`,
     watchMode: process.env.WATCH_MODE === 'true',
     webpack: {
-      nodeConfig: createWebpackConfig()
+      view: createNodeWebpackConfig(),
+      hydrate: createBrowserConfig()
     },
     output: {
-      node: path.join(__dirname, 'compiled/node_components'),
-      browser: path.join(__dirname, 'compiled/browser_components')
+      view: path.join(__dirname, 'compiled/node_components'),
+      hydrate: path.join(__dirname, 'compiled/browser_components')
     }
   },
   components: {

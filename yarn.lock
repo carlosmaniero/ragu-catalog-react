@@ -2541,10 +2541,10 @@ ragu-dom@^0.0.5:
   resolved "https://registry.yarnpkg.com/ragu-dom/-/ragu-dom-0.0.5.tgz#2d57d2d55852afd2a2764382746d941846b4343b"
   integrity sha512-zx6JmY0y7KRXJtmECx0y2l82Vfxq7PyfFkVNw0xsIpn6Yjs9BpwJDEZH3g1vrC1hyE2r1rMy0dy+9FDbO/NyAg==
 
-ragu-server@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/ragu-server/-/ragu-server-0.0.8.tgz#8fc62c02efe734a040490836ec17375f325aa561"
-  integrity sha512-k9soZeRvmagS2X3F///gficx7WxMExk6gs8FSxGgtov8+UYbB9xZk94XFKBdNegu8k3IzRpTWoDzJWy+pBYQFQ==
+ragu-server@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/ragu-server/-/ragu-server-0.0.9.tgz#e53f6897cd52807d84e09260dcef0c10353a72ca"
+  integrity sha512-4XAFTvkQU3q50uki3Vjhcgs7k6aI04DiZP5A9Eso6NhBbFp//vCNJLCCo4BIl/SfXCLmNDCVfPHPwaBkTr2FSA==
   dependencies:
     "@types/webpack-node-externals" "^2.5.0"
     chalk "^4.1.0"
