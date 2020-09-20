@@ -611,7 +611,7 @@ bindings@^1.5.0:
   dependencies:
     file-uri-to-path "1.0.0"
 
-bluebird@^3.5.5:
+bluebird@^3.4.1, bluebird@^3.5.5:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
@@ -2263,6 +2263,13 @@ normalize-path@^3.0.0, normalize-path@~3.0.0:
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
   integrity sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==
 
+npm-programmatic@^0.0.12:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/npm-programmatic/-/npm-programmatic-0.0.12.tgz#566ba2452c886c7fd3a41586bd559cdc872fa77e"
+  integrity sha512-fvZdiJS038ZH31z59cEiIywOcgX1u23aLc0wAKF4btyhbYQxE93wTQjzs/URERK+GhS/QghDILQmEvgxu77/zQ==
+  dependencies:
+    bluebird "^3.4.1"
+
 object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
@@ -2536,21 +2543,22 @@ querystring@0.2.0:
   resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
   integrity sha1-sgmEkgO7Jd+CDadW50cAWHhSFiA=
 
-ragu-dom@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/ragu-dom/-/ragu-dom-0.0.5.tgz#2d57d2d55852afd2a2764382746d941846b4343b"
-  integrity sha512-zx6JmY0y7KRXJtmECx0y2l82Vfxq7PyfFkVNw0xsIpn6Yjs9BpwJDEZH3g1vrC1hyE2r1rMy0dy+9FDbO/NyAg==
+ragu-dom@^0.0.18:
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/ragu-dom/-/ragu-dom-0.0.18.tgz#cb36fae5ceaac0b7c86ff3dcb7c4296dccd6aca0"
+  integrity sha512-BjrK6hBwNmiVG3iink2NEgvHO4qAZVZg6P4OReyUbnDhaYW6DXunHR+zYaHcLw0ZXeIE2vIyrrmQkwNvvlSu9w==
 
-ragu-server@^0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/ragu-server/-/ragu-server-0.0.10.tgz#afd6cecf4852fb41c459113ec8b7b89c40c18a78"
-  integrity sha512-4jj/SI8cvTNW/B63NeHXCI13TXdCXsj4VyW7MKZNHEsSlnmwO0E6tYraJLB2nl0ESDrvlme6zmf0j8K7Ema6Mw==
+ragu-server@^0.0.19:
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/ragu-server/-/ragu-server-0.0.19.tgz#256d688cf669c5ee6b1399bfe9f678807c8e6370"
+  integrity sha512-9Jfta+YGC1TlcfdQgiywlgt6VH87koGYDilIDFDytoP6cYNbgtvWM6G1ravs2A0X6V7Aq/h8A4r29lzvZEmkng==
   dependencies:
     "@types/webpack-node-externals" "^2.5.0"
     chalk "^4.1.0"
     chunks-2-json-webpack-plugin "^1.0.4"
     express "^4.17.1"
-    ragu-dom "^0.0.5"
+    npm-programmatic "^0.0.12"
+    ragu-dom "^0.0.18"
     webpack "^4.44.1"
     webpack-bundle-analyzer "^3.8.0"
     webpack-merge "^5.1.4"
