@@ -12,10 +12,14 @@ interface PokeAPIResult {
   url: string
 }
 
+let responseBody: any = null;
+
 export default reactComponentView<{}, PokemonData[]>({
     propsToState: async () => {
-      const response = await fetch('https://pokeapi.co/api/v2/pokemon');
-      const responseBody = await response.json();
+      if (!responseBody) {
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon');
+        responseBody = await response.json();
+      }
 
       return responseBody.results.map((result: PokeAPIResult) => {
         return {
