@@ -34,17 +34,17 @@ module.exports = {
       {
         nodeRequire: 'react',
         globalVariable: 'React',
-        dependency: 'https://unpkg.com/react@16.13.1/umd/react.production.min.js'
+        dependency: 'https://cdnjs.cloudflare.com/ajax/libs/react/17.0.0-rc.2/umd/react.production.min.js'
       },
       {
         nodeRequire: 'react-is',
         globalVariable: 'reactIs',
-        dependency: 'https://unpkg.com/react-is@16.13.1/umd/react-is.production.min.js'
+        dependency: 'https://cdnjs.cloudflare.com/ajax/libs/react-is/17.0.0-rc.2/umd/react-is.production.min.js'
       },
       {
         nodeRequire: 'react-dom',
         globalVariable: 'ReactDOM',
-        dependency: 'https://unpkg.com/react-dom@16.13.1/umd/react-dom.production.min.js',
+        dependency: 'https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.0-rc.2/umd/react-dom.production.min.js',
         order: 1
       },
       {
