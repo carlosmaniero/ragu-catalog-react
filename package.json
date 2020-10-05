@@ -29,5 +29,8 @@
     "webpack-bundle-analyzer": "^3.8.0",
     "webpack-merge": "^5.1.4",
     "webpack-node-externals": "^2.5.2"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.11.1"
   }
 }
