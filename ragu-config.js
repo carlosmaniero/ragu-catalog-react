@@ -6,9 +6,10 @@ const fetch = require('node-fetch');
 global.fetch = fetch;
 
 const port = parseInt(process.env.PORT || '3101');
-const assetsPrefix = process.env.HEROKU_APP_NAME ? `${process.env.HEROKU_APP_NAME}` : `http://localhost:${port}`;
+const baseurl = process.env.HEROKU_APP_NAME ? `${process.env.HEROKU_APP_NAME}` : `http://localhost:${port}`;
 
 module.exports = {
+  baseurl: baseurl,
   server: {
     port,
     routes: {
@@ -17,7 +18,7 @@ module.exports = {
     previewEnabled: true
   },
   compiler: {
-    assetsPrefix: `${assetsPrefix}/component-assets/`,
+    assetsPrefix: `${baseurl}/component-assets/`,
     webpack: {
       view: createNodeWebpackConfig(),
       hydrate: createBrowserConfig()
